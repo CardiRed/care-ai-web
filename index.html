@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>온돌 · 돌봄 대상 추천</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#dashboard"><span class="brand-mark">온</span><span>온돌<small>따뜻하게 연결하는 돌봄</small></span></a>
+    <p class="menu-label">돌봄 업무 공간</p>
+    <nav aria-label="주 메뉴">
+      <button data-nav="dashboard"><span>◫</span>대시보드</button>
+      <button data-nav="people"><span>☷</span>대상자 목록</button>
+      <button data-nav="form"><span>＋</span>대상자 등록</button>
+      <button data-nav="analysis"><span>◇</span>AI 분석 결과</button>
+    </nav>
+    <div class="sidebar-note"><span class="dot"></span> 프론트엔드 프로토타입<p>모든 대상자와 분석 결과는<br>시연용 예시입니다.</p></div>
+    <div class="profile"><span class="avatar">담</span><div>돌봄 담당자<small>생활지원사 · 사회복지사</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>온돌 <b>돌봄 관리 워크스페이스</b></span><div class="header-tools"><span id="today"></span><label>보기 모드 <select id="role"><option value="admin">관리자 · 시연</option><option value="viewer">조회자 · 시연</option></select></label></div></header>
+    <section id="visit-strip" aria-label="오늘의 방문 현황"></section>
+    <main id="content" tabindex="-1"></main>
+    <footer>온돌 · AI 돌봄 의사결정 지원 <span>최종 돌봄 판단은 담당자가 합니다.</span></footer>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <dialog id="leave-dialog" aria-labelledby="leave-title"><h2 id="leave-title">수정 중인 내용이 있습니다</h2><p>이동하면 저장하지 않은 수정은 취소됩니다.</p><div class="actions"><button id="keep-editing">계속 편집</button><button id="discard-edit" class="primary">변경 취소 후 이동</button></div></dialog>
+</body>
+</html>

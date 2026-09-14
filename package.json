@@ -1,0 +1,17 @@
+{
+  "name": "care-ai-web",
+  "version": "2.0.0",
+  "private": true,
+  "description": "온돌 돌봄 의사결정 지원 프론트엔드 시연",
+  "scripts": {
+    "check": "node --check script.js",
+    "test": "node tests/smoke.cjs && node tests/errors.cjs",
+    "package": "node scripts/package.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
